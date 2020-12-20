@@ -1,0 +1,10 @@
+extends includes/head.pug 
+block content
+    .container.text-center.new
+        form(action="/campgrounds" method="POST" class="new--form")
+            h1(class="h3 mb-3 fw-normal text-light") Create a New Campground
+            label(for="name" class="visually-hidden") Name
+            input(type="text" id="name" class="form-control new--input" name="name" placeholder='name')
+            label(for="image" class="visually-hidden") Image
+            input(type="text" name="image" id="image" class="form-control new--input" placeholder='image')
+            button(class="w-100 btn btn-lg btn-warning") Submit

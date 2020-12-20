@@ -1,0 +1,19 @@
+extends includes/head.pug 
+block content
+    .container
+        div(class="p-4 p-md-5 text-dark rounded bg-warning")
+            div(class="col-md-6 px-0")
+                h1(class="display-5 font-italic") Welcome to MountCamp
+                p(class="lead my-3") Extraordinary camping with breathtaking experience from the mountains. 
+                p(class="lead mb-0")
+                    a(href="/campgrounds/new" class="text-dark fw-bold") Add New Campground
+    .album.py-4
+        .container.my-4
+            div(class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5")
+                each campground in campgrounds
+                    div(class="col py-4")
+                        div(class="card shadow-sm")
+                            a(href="")
+                                img(src=campground.image, alt="" class="card-img-top" height='auto' width="100%")
+                            div(class="card-body")
+                                p(class="card-text")= campground.name
